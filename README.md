@@ -19,6 +19,7 @@ In **Settings > Pages > Custom domain**, enter your domain (for example `pickurp
 | Launch date and time | `LAUNCH_DATE` near the top of the script (ISO format with timezone) |
 | Email sign-ups | Replace `YOUR_FORM_ID` in the form `action` with your [Formspree](https://formspree.io) form ID (free plan available) |
 | Social and contact links | The `<footer>` list: replace each `#` and `hello@yourdomain.com` |
+| WIP projects | The `<details class="wip">` list under the sign-up form: edit a link, or copy an `<li>` to add a project |
 | Share preview image | Uncomment the `og:image` tag and point it to a 1200x630 image in the repo |
 | Colours | The `:root` variables at the top of the `<style>` block |
 

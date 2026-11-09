@@ -28,6 +28,7 @@
   --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 html{height:100%}
 body{min-height:100%;background:var(--ink);color:var(--paper);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
 #grid{position:fixed;inset:0;width:100%;height:100%;display:block}
@@ -65,6 +66,25 @@ button[disabled]{opacity:.6;cursor:wait}
 .msg.ok{color:var(--cyan)}
 .msg.err{color:var(--sun)}
 .hint{margin-top:1.5rem;font-size:.9rem;color:var(--muted)}
+.wip{margin-top:2.25rem;max-width:34rem}
+.wip summary{display:inline-flex;align-items:center;gap:.85rem;padding:.95rem 1.4rem;font-weight:700;color:var(--paper);border:2px solid var(--cyan);cursor:pointer;list-style:none;user-select:none;-webkit-user-select:none;transition:background .15s,color .15s,transform .15s}
+.wip summary::-webkit-details-marker{display:none}
+.wip summary:hover{background:var(--cyan);color:var(--ink)}
+.wip summary:active{transform:translateY(1px)}
+.chev{width:.5rem;height:.5rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s cubic-bezier(.2,.8,.2,1)}
+.wip[open] .chev{transform:translateY(2px) rotate(225deg)}
+.wip-list{list-style:none;display:grid;gap:.5rem;margin-top:.75rem}
+.wip-list a{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"num name arrow" "num desc arrow";column-gap:1rem;align-items:center;padding:.95rem 1.1rem;background:var(--ink-2);border-left:4px solid var(--pink);color:var(--paper);text-decoration:none;transition:background .15s}
+.wip-list li:nth-child(2) a{border-color:var(--sun)}
+.wip-list a:hover{background:#252D6B}
+.wip-num{grid-area:num;font-family:var(--display);font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+.wip-name{grid-area:name;font-family:var(--display);font-weight:800;font-size:1.25rem;line-height:1.2}
+.wip-desc{grid-area:desc;font-size:.9rem;color:var(--muted)}
+.wip-arrow{grid-area:arrow;font-size:1.25rem;transition:transform .15s}
+.wip-list a:hover .wip-arrow{transform:translate(2px,-2px)}
+.wip[open] .wip-list li{animation:wip-in .28s cubic-bezier(.2,.8,.2,1) both}
+.wip[open] .wip-list li:nth-child(2){animation-delay:.05s}
+@keyframes wip-in{from{opacity:0;transform:translateY(-6px)}}
 footer{display:flex;gap:1.25rem 2rem;flex-wrap:wrap;justify-content:space-between;align-items:center;font-size:.92rem;color:var(--muted)}
 footer ul{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
 footer a{color:var(--paper);text-decoration:none;border-bottom:2px solid var(--cyan)}
@@ -73,8 +93,12 @@ footer a:hover{border-color:var(--pink)}
   .unit{width:calc(50% - .4rem)}
   .stage::before{background:rgba(16,22,58,.8)}
   button{flex:1 1 100%}
+  .wip summary{display:flex;justify-content:space-between}
 }
-@media (prefers-reduced-motion:reduce){button{transition:none}}
+@media (prefers-reduced-motion:reduce){
+  button,.wip summary,.chev,.wip-list a,.wip-arrow{transition:none}
+  .wip[open] .wip-list li{animation:none}
+}
 </style>
 </head>
 <body>
@@ -104,6 +128,25 @@ footer a:hover{border-color:var(--pink)}
       <p class="msg" id="msg" role="status" aria-live="polite"></p>
     </form>
     <p class="hint">Move your cursor or finger across the page to pick a few pixels.</p>
+
+    <!-- Work-in-progress projects: add a new <li> to list another one -->
+    <details class="wip">
+      <summary>Click here for WIP projects<span class="chev" aria-hidden="true"></span></summary>
+      <ul class="wip-list">
+        <li><a href="https://gokulbharathi04.github.io/Rangaaroots/">
+          <span class="wip-num" aria-hidden="true">01</span>
+          <span class="wip-name">Rangaa Roots</span>
+          <span class="wip-desc">A2 bilona ghee and traditional foods from Tamil Nadu</span>
+          <span class="wip-arrow" aria-hidden="true">&#8599;</span>
+        </a></li>
+        <li><a href="https://twistywrapenterprises.com/">
+          <span class="wip-num" aria-hidden="true">02</span>
+          <span class="wip-name">Twisty</span>
+          <span class="wip-desc">Twisty Wrap Enterprises: packaging and industrial supplies</span>
+          <span class="wip-arrow" aria-hidden="true">&#8599;</span>
+        </a></li>
+      </ul>
+    </details>
   </main>
 
   <footer>
