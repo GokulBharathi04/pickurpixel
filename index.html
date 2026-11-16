@@ -1,257 +1,579 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pick'UR'Pixel | Coming soon</title>
-<meta name="description" content="Pick'UR'Pixel is launching soon. Leave your email and we'll tell you the moment the new site is live.">
-<meta name="theme-color" content="#10163A">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pick your Pixel | Websites, SEO, ads, automation and billing software</title>
+<meta name="description" content="Pick your Pixel is a digital studio that takes businesses online, end to end: websites, SEO, social media, Google Business Profile, branding, performance marketing, marketing automation and custom billing software.">
+<meta name="theme-color" content="#3b3a6e">
+<link rel="canonical" href="https://www.pickurpixel.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Pick'UR'Pixel | Coming soon">
-<meta property="og:description" content="A new site is loading, one pixel at a time. Get notified when we launch.">
-<!-- Optional: add a 1200x630 image to the repo and uncomment -->
-<!-- <meta property="og:image" content="https://YOUR-DOMAIN/og-image.png"> -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='16' height='16' fill='%23FF3D81'/%3E%3Crect x='16' width='16' height='16' fill='%2320D5EC'/%3E%3Crect y='16' width='16' height='16' fill='%23FFD23F'/%3E%3Crect x='16' y='16' width='16' height='16' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:title" content="Pick your Pixel: every pixel, picked with purpose">
+<meta property="og:description" content="Websites, search, social, branding, ads, automation and billing software. One team, working as one plan.">
+<meta property="og:image" content="https://www.pickurpixel.com/assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.png?v=2026-11-17" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#10163A;
-  --ink-2:#1B2257;
-  --paper:#F4F6FF;
-  --muted:#B4BBE0;
-  --pink:#FF3D81;
-  --cyan:#20D5EC;
-  --sun:#FFD23F;
-  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
-  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-[hidden]{display:none!important}
-html{height:100%}
-body{min-height:100%;background:var(--ink);color:var(--paper);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
-#grid{position:fixed;inset:0;width:100%;height:100%;display:block}
-.stage{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(1.5rem,4vw,3.5rem);pointer-events:none}
-.stage::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,22,58,.92) 0%,rgba(16,22,58,.7) 45%,rgba(16,22,58,0) 80%);z-index:-1}
-.stage>*{pointer-events:auto}
-.mark{display:inline-flex;gap:3px;width:fit-content}
-.mark i{width:14px;height:14px;display:block}
-.mark i:nth-child(1){background:var(--pink)}
-.mark i:nth-child(2){background:var(--cyan)}
-.mark i:nth-child(3){background:var(--sun)}
-main{max-width:46rem;padding:3rem 0}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(3rem,11.5vw,8rem);line-height:.92;letter-spacing:-.035em}
-h1 .q{color:var(--pink)}
-.tagline{font-family:var(--display);font-weight:500;font-size:clamp(1.35rem,3.2vw,2rem);line-height:1.2;margin-top:1.5rem;color:var(--paper)}
-.sub{max-width:34rem;margin-top:1rem;color:var(--muted)}
-.count{display:flex;gap:.75rem;margin-top:2.25rem;flex-wrap:wrap}
-.unit{width:5.25rem;padding:.8rem .5rem .65rem;background:var(--ink-2);border-top:4px solid var(--pink);text-align:center}
-.unit:nth-child(2){border-color:var(--cyan)}
-.unit:nth-child(3){border-color:var(--sun)}
-.unit:nth-child(4){border-color:var(--paper)}
-.unit b{display:block;font-family:var(--display);font-weight:800;font-size:2.1rem;line-height:1;font-variant-numeric:tabular-nums}
-.unit span{display:block;margin-top:.35rem;font-size:.8rem;color:var(--muted)}
-.live{margin-top:2.25rem;font-family:var(--display);font-weight:800;font-size:1.6rem}
-form{display:flex;gap:.6rem;margin-top:2.25rem;max-width:34rem;flex-wrap:wrap}
-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-input[type=email]{flex:1 1 15rem;min-width:0;padding:.95rem 1.1rem;font:inherit;color:var(--ink);background:var(--paper);border:2px solid transparent;border-radius:0}
-input[type=email]::placeholder{color:#6B7299}
-button{padding:.95rem 1.6rem;font:inherit;font-weight:700;color:var(--ink);background:var(--sun);border:2px solid var(--sun);border-radius:0;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
-button:hover{background:var(--pink);border-color:var(--pink);color:#fff}
-button:active{transform:translateY(1px)}
-button[disabled]{opacity:.6;cursor:wait}
-:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
-.msg{flex-basis:100%;min-height:1.6em;font-size:.95rem}
-.msg.ok{color:var(--cyan)}
-.msg.err{color:var(--sun)}
-.hint{margin-top:1.5rem;font-size:.9rem;color:var(--muted)}
-.wip{margin-top:2.25rem;max-width:34rem}
-.wip summary{display:inline-flex;align-items:center;gap:.85rem;padding:.95rem 1.4rem;font-weight:700;color:var(--paper);border:2px solid var(--cyan);cursor:pointer;list-style:none;user-select:none;-webkit-user-select:none;transition:background .15s,color .15s,transform .15s}
-.wip summary::-webkit-details-marker{display:none}
-.wip summary:hover{background:var(--cyan);color:var(--ink)}
-.wip summary:active{transform:translateY(1px)}
-.chev{width:.5rem;height:.5rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s cubic-bezier(.2,.8,.2,1)}
-.wip[open] .chev{transform:translateY(2px) rotate(225deg)}
-.wip-list{list-style:none;display:grid;gap:.5rem;margin-top:.75rem}
-.wip-list a{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"num name arrow" "num desc arrow";column-gap:1rem;align-items:center;padding:.95rem 1.1rem;background:var(--ink-2);border-left:4px solid var(--pink);color:var(--paper);text-decoration:none;transition:background .15s}
-.wip-list li:nth-child(2) a{border-color:var(--sun)}
-.wip-list a:hover{background:#252D6B}
-.wip-num{grid-area:num;font-family:var(--display);font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
-.wip-name{grid-area:name;font-family:var(--display);font-weight:800;font-size:1.25rem;line-height:1.2}
-.wip-desc{grid-area:desc;font-size:.9rem;color:var(--muted)}
-.wip-arrow{grid-area:arrow;font-size:1.25rem;transition:transform .15s}
-.wip-list a:hover .wip-arrow{transform:translate(2px,-2px)}
-.wip[open] .wip-list li{animation:wip-in .28s cubic-bezier(.2,.8,.2,1) both}
-.wip[open] .wip-list li:nth-child(2){animation-delay:.05s}
-@keyframes wip-in{from{opacity:0;transform:translateY(-6px)}}
-footer{display:flex;gap:1.25rem 2rem;flex-wrap:wrap;justify-content:space-between;align-items:center;font-size:.92rem;color:var(--muted)}
-footer ul{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
-footer a{color:var(--paper);text-decoration:none;border-bottom:2px solid var(--cyan)}
-footer a:hover{border-color:var(--pink)}
-@media (max-width:600px){
-  .unit{width:calc(50% - .4rem)}
-  .stage::before{background:rgba(16,22,58,.8)}
-  button{flex:1 1 100%}
-  .wip summary{display:flex;justify-content:space-between}
-}
-@media (prefers-reduced-motion:reduce){
-  button,.wip summary,.chev,.wip-list a,.wip-arrow{transition:none}
-  .wip[open] .wip-list li{animation:none}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/lenis/lenis.css">
+<link rel="stylesheet" href="assets/site.css?v=2026-11-17">
 </head>
 <body>
-<canvas id="grid" aria-hidden="true"></canvas>
+<!-- The pressed-in lettering's inner shadow -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="cut-relief" x="-4%" y="-6%" width="108%" height="112%" color-interpolation-filters="sRGB">
+    <feComponentTransfer in="SourceAlpha" result="hole"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+    <feOffset in="hole" dx="3" dy="4" result="moved"/>
+    <feGaussianBlur in="moved" stdDeviation="1.8" result="soft"/>
+    <feFlood flood-color="#0e0d28" flood-opacity=".72" result="tone"/>
+    <feComposite in="tone" in2="soft" operator="in" result="shade"/>
+    <feComposite in="shade" in2="SourceAlpha" operator="in" result="inner"/>
+    <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="inner"/></feMerge>
+  </filter>
+</svg>
+<a class="skip" href="#services">Skip to services</a>
 
-<div class="stage">
-  <div class="mark" aria-hidden="true"><i></i><i></i><i></i></div>
-
-  <main>
-    <h1>Pick<span class="q">'</span>UR<span class="q">'</span>Pixel</h1>
-    <p class="tagline">A new site is loading, one pixel at a time.</p>
-    <p class="sub">We're putting the finishing touches on Pick'UR'Pixel. Leave your email and we'll tell you the moment it goes live.</p>
-
-    <div class="count" id="count" role="timer" aria-label="Time until launch">
-      <div class="unit"><b id="d">00</b><span>days</span></div>
-      <div class="unit"><b id="h">00</b><span>hours</span></div>
-      <div class="unit"><b id="m">00</b><span>minutes</span></div>
-      <div class="unit"><b id="s">00</b><span>seconds</span></div>
-    </div>
-    <p class="live" id="live" hidden>We're almost there. Check back very soon.</p>
-
-    <!-- Replace YOUR_FORM_ID with your Formspree form ID (see README.md) -->
-    <form id="notify" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-      <label for="email">Email address</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-      <button type="submit">Notify me</button>
-      <p class="msg" id="msg" role="status" aria-live="polite"></p>
-    </form>
-    <p class="hint">Move your cursor or finger across the page to pick a few pixels.</p>
-
-    <!-- Work-in-progress projects: add a new <li> to list another one -->
-    <details class="wip">
-      <summary>Click here for WIP projects<span class="chev" aria-hidden="true"></span></summary>
-      <ul class="wip-list">
-        <li><a href="https://rangaaroots.pickurpixel.com/">
-          <span class="wip-num" aria-hidden="true">01</span>
-          <span class="wip-name">Rangaa Roots</span>
-          <span class="wip-desc">A2 bilona ghee and traditional foods from Tamil Nadu</span>
-          <span class="wip-arrow" aria-hidden="true">&#8599;</span>
-        </a></li>
-        <li><a href="https://twistywrapenterprises.com/">
-          <span class="wip-num" aria-hidden="true">02</span>
-          <span class="wip-name">Twisty</span>
-          <span class="wip-desc">Twisty Wrap Enterprises: packaging and industrial supplies</span>
-          <span class="wip-arrow" aria-hidden="true">&#8599;</span>
-        </a></li>
-      </ul>
-    </details>
-  </main>
-
-  <footer>
-    <span>&copy; <span id="yr">2026</span> Pick'UR'Pixel. All rights reserved.</span>
-    <ul>
-      <!-- Replace each # with your real link, or delete the item -->
-      <li><a href="#" rel="noopener">Instagram</a></li>
-      <li><a href="#" rel="noopener">Facebook</a></li>
-      <li><a href="mailto:hello@yourdomain.com">Email us</a></li>
-    </ul>
-  </footer>
+<div id="navigation" data-section="navigation">
+  <header class="nav__bar m-board">
+    <a class="nav__brand m-ply" href="#hero" aria-label="Pick your Pixel: back to the top"><img src="assets/pickyourpixel-logo-96.webp?v=2026-11-02" width="84" height="48" alt="Pick your Pixel"></a>
+    <nav class="nav__links" aria-label="Page sections">
+      <a class="m-link" href="#services">Services</a>
+      <a class="m-link hot" href="#growth">Ads &amp; automation</a>
+      <a class="m-link" href="#process">How we work</a>
+      <a class="m-link" href="#packages">Packages</a>
+      <a class="m-link" href="#contact">Contact</a>
+    </nav>
+    <a class="m-btn m-btn--ink" href="#contact">Get a free quote</a>
+    <button class="nav__toggle m-icon" type="button" aria-controls="menu" aria-expanded="false" aria-label="Open menu"><i></i></button>
+  </header>
+  <div class="nav__menu m-ply" id="menu" hidden>
+    <button class="nav__close m-icon" type="button" aria-label="Close menu"><i></i></button>
+    <nav class="nav__menu-links" aria-label="Page sections, menu">
+      <a href="#services">Services</a>
+      <a href="#growth">Ads &amp; automation</a>
+      <a href="#process">How we work</a>
+      <a href="#studio">About us</a>
+      <a href="#packages">Packages</a>
+      <a href="#faq">Questions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="m-text">Call or WhatsApp: +91 88702 97917 · +91 90473 52704</p>
+  </div>
 </div>
 
-<script>
-/* ===== Settings you can edit ===== */
-var LAUNCH_DATE = "2026-10-15T09:00:00+05:30"; // ISO format with timezone offset
-var COLORS = ["255,61,129","32,213,236","255,210,63","244,246,255"]; // pink, cyan, sun, paper
+<main>
 
-/* ===== Countdown ===== */
-(function(){
-  var target = new Date(LAUNCH_DATE).getTime();
-  var $ = function(id){ return document.getElementById(id); };
-  var el = {d:$("d"),h:$("h"),m:$("m"),s:$("s")}, box = document.getElementById("count"), live = document.getElementById("live");
-  function pad(n){return String(n).padStart(2,"0")}
-  function tick(){
-    var t = target - Date.now();
-    if (isNaN(t) || t <= 0){ box.hidden = true; live.hidden = false; return false; }
-    el.d.textContent = pad(Math.floor(t/864e5));
-    el.h.textContent = pad(Math.floor(t%864e5/36e5));
-    el.m.textContent = pad(Math.floor(t%36e5/6e4));
-    el.s.textContent = pad(Math.floor(t%6e4/1e3));
-    return true;
-  }
-  if (tick()){ var iv = setInterval(function(){ if(!tick()) clearInterval(iv); },1000); }
-  document.getElementById("yr").textContent = new Date().getFullYear();
-})();
+<!-- Hero -->
+<section id="hero" data-section="hero" aria-labelledby="hero-title">
+  <div class="hero__flap m-board">
+    <div class="hero__light" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <h1 class="hero__title" id="hero-title">
+        <span class="hero__line hero__line--raised"><span class="hero__channel"><span class="m-ply m-slot"><span class="hero__word m-raised">We build it.</span></span></span></span>
+        <span class="hero__line hero__line--raised"><span class="hero__channel"><span class="m-ply m-slot"><span class="hero__word m-raised">Google</span></span><span class="m-ply m-slot"><span class="hero__word m-raised">finds it.</span></span></span></span>
+        <span class="hero__line hero__line--cut"><span class="hero__word m-cut">Customers</span></span>
+        <span class="hero__line hero__line--cut"><span class="hero__word m-cut m-cut--blue">call.</span></span>
+      </h1>
+      <div class="hero__aside">
+        <p class="m-text-2"><strong>Pick your Pixel is a digital studio that takes businesses online, end to end.</strong> Websites, search, social, branding, ads, automation and billing software, working as one plan.</p>
+        <div class="hero__actions">
+          <a class="m-btn m-btn--ink" href="#contact">Get a free, itemised quote</a>
+          <a class="m-link" href="#services">See the services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero__wash" aria-hidden="true"></div>
+</section>
 
-/* ===== Pixel grid ===== */
-(function(){
-  var cv = document.getElementById("grid"), ctx = cv.getContext("2d");
-  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var size, cols, rows, heat, hue, dpr, raf, last = 0, spawnAt = 0;
-  function setup(){
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    size = innerWidth < 600 ? 28 : 40;
-    cv.width = innerWidth*dpr; cv.height = innerHeight*dpr;
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    cols = Math.ceil(innerWidth/size); rows = Math.ceil(innerHeight/size);
-    heat = new Float32Array(cols*rows); hue = new Uint8Array(cols*rows);
-    if (reduce) for (var i=0;i<cols*rows/14;i++) light((Math.random()*cols*rows)|0, .5);
-    draw();
-  }
-  function light(i, v){ heat[i] = v; hue[i] = (Math.random()*COLORS.length)|0; }
-  function draw(){
-    ctx.clearRect(0,0,innerWidth,innerHeight);
-    ctx.strokeStyle = "rgba(180,187,224,.07)"; ctx.lineWidth = 1;
-    ctx.beginPath();
-    for (var x=0;x<=cols;x++){ ctx.moveTo(x*size+.5,0); ctx.lineTo(x*size+.5,rows*size); }
-    for (var y=0;y<=rows;y++){ ctx.moveTo(0,y*size+.5); ctx.lineTo(cols*size,y*size+.5); }
-    ctx.stroke();
-    for (var i=0;i<heat.length;i++){
-      if (heat[i] > .02){
-        ctx.fillStyle = "rgba("+COLORS[hue[i]]+","+(heat[i]*.6).toFixed(3)+")";
-        ctx.fillRect((i%cols)*size+1,((i/cols)|0)*size+1,size-1,size-1);
-      }
-    }
-  }
-  function frame(t){
-    if (t - spawnAt > 220){ spawnAt = t; light((Math.random()*cols*rows)|0, .9); }
-    var dt = Math.min((t-last)/1000, .1); last = t;
-    for (var i=0;i<heat.length;i++) if (heat[i] > 0) heat[i] = Math.max(0, heat[i] - dt*.55);
-    draw();
-    raf = requestAnimationFrame(frame);
-  }
-  function pick(e){
-    var x = (e.clientX/size)|0, y = (e.clientY/size)|0;
-    if (x>=0 && x<cols && y>=0 && y<rows) light(y*cols+x, 1);
-  }
-  addEventListener("resize", function(){ setup(); });
-  if (!reduce){
-    addEventListener("pointermove", pick, {passive:true});
-    addEventListener("pointerdown", pick, {passive:true});
-    document.addEventListener("visibilitychange", function(){
-      if (document.hidden) cancelAnimationFrame(raf); else { last = performance.now(); raf = requestAnimationFrame(frame); }
-    });
-  }
-  setup();
-  if (!reduce) raf = requestAnimationFrame(frame);
-})();
+<!-- The press -->
+<section id="purpose" data-section="purpose" aria-labelledby="purpose-title">
+  <div class="purpose__stage">
+    <div class="purpose__flap m-board">
+      <h2 class="purpose__statement" id="purpose-title">
+        <span class="purpose__line m-cut">Every pixel,</span>
+        <span class="purpose__line m-cut">picked</span>
+        <span class="purpose__line m-cut">with</span>
+        <span class="purpose__line m-cut m-cut--blue">purpose.</span>
+        <span class="purpose__roller" aria-hidden="true"></span>
+      </h2>
+      <div class="purpose__note">
+        <p class="m-text-2">Every screen is made of pixels, and every pixel is a choice. We pick each one with purpose: the right layout, the right words, the right colours, so your customers trust you from the first click.</p>
+        <p class="m-text">Our butterfly stands for that transformation: from a business people walk past to a business people search for.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-/* ===== Email sign-up ===== */
-(function(){
-  var f = document.getElementById("notify"), msg = document.getElementById("msg"), btn = f.querySelector("button");
-  function say(t, cls){ msg.textContent = t; msg.className = "msg " + (cls||""); }
-  f.addEventListener("submit", function(e){
-    e.preventDefault();
-    var email = f.email.value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ say("Enter a valid email address, like name@example.com.","err"); f.email.focus(); return; }
-    btn.disabled = true; say("Sending...");
-    fetch(f.action, {method:"POST", headers:{"Accept":"application/json","Content-Type":"application/json"}, body:JSON.stringify({email:email})})
-      .then(function(r){ if(!r.ok) throw 0; f.reset(); say("You're on the list. We'll email you when we launch.","ok"); })
-      .catch(function(){ say("That didn't send. Check your connection and try again.","err"); })
-      .finally(function(){ btn.disabled = false; });
-  });
-})();
-</script>
+<!-- Ads and automation -->
+<section class="sec" id="growth" data-section="growth" aria-labelledby="growth-title">
+  <div class="head">
+    <div>
+      <span class="flagline" data-motion="emboss">Performance marketing and marketing automation</span>
+      <h2 class="m-cut" id="growth-title" data-motion="press">Ads that pay. <span class="m-cut--blue">Follow-ups that run.</span></h2>
+    </div>
+    <p class="m-text-2" data-motion="emboss">A website gets you found. These two bring enquiries in faster and make sure none of them goes cold. Every rupee and every reply is tracked, so you can see what works.</p>
+  </div>
+  <div class="tray m-ply">
+    <div class="duo">
+      <article class="panel m-surface" data-motion="emboss">
+        <p class="m-text-3">Get more enquiries, now</p>
+        <h3 class="m-title">Performance marketing</h3>
+        <p class="m-text">Paid campaigns on Google, Instagram and Facebook, built around one question: how many enquiries did this bring in, and what did each one cost?</p>
+        <div class="funnel m-well" role="img" aria-label="How a campaign is tracked: people who saw the ad, clicked, enquired and became customers">
+          <span>Saw your ad</span><span>Clicked through</span><span>Sent an enquiry</span><span>Became a customer</span>
+        </div>
+        <ul>
+          <li>Google Search and Maps ads for people already looking for your service</li>
+          <li>Instagram and Facebook ads aimed at your area and audience</li>
+          <li>Ad copy, creatives and a landing page that asks for the enquiry</li>
+          <li>Conversion tracking for calls, WhatsApp taps and form submissions</li>
+          <li>Retargeting for visitors who looked but did not enquire</li>
+          <li>A clear monthly report: spend, enquiries and cost per enquiry</li>
+        </ul>
+        <span class="m-crease" aria-hidden="true" data-motion="crease"></span>
+        <p class="ideal"><b>Ideal for:</b> businesses with a working website that want more enquiries now, without waiting for search rankings to build.</p>
+      </article>
+      <article class="panel m-surface" data-motion="emboss">
+        <p class="m-text-3">Never let an enquiry go cold</p>
+        <h3 class="m-title">Marketing automation</h3>
+        <p class="m-text">The follow-up most businesses mean to do and never have time for, set up once and left running on WhatsApp, email and SMS.</p>
+        <ol class="flow m-well" aria-label="An example automated follow-up">
+          <li>New enquiry arrives<small>from your website, Google listing or an ad</small></li>
+          <li>Instant reply on WhatsApp<small>with your details and the next step</small></li>
+          <li>Reminder if there is no answer<small>a nudge after a day or two</small></li>
+          <li>Review request after the job<small>with a link to your Google listing</small></li>
+        </ol>
+        <ul>
+          <li>Every enquiry captured in one place, from every channel</li>
+          <li>Instant replies and scheduled follow-up messages</li>
+          <li>Quote, payment and appointment reminders</li>
+          <li>Review requests sent after each completed job</li>
+          <li>Offers and updates to past customers, sent on a schedule</li>
+          <li>A simple dashboard showing where each enquiry stands</li>
+        </ul>
+        <span class="m-crease" aria-hidden="true" data-motion="crease"></span>
+        <p class="ideal"><b>Ideal for:</b> businesses that get enquiries but lose some because nobody followed up in time.</p>
+      </article>
+    </div>
+  </div>
+  <div class="tray-foot">
+    <p class="m-text">Both are quoted separately, based on your budget and how enquiries reach you today.</p>
+    <a class="m-btn m-btn--ink" href="https://wa.me/918870297917?text=Hi%20Pick%20your%20Pixel!%20I'd%20like%20to%20know%20more%20about%20performance%20marketing%20and%20marketing%20automation." target="_blank" rel="noopener">Ask about ads and automation</a>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="sec" id="services" data-section="services" aria-labelledby="services-title">
+  <div class="head">
+    <h2 class="m-cut" id="services-title" data-motion="press">Ten services, one goal</h2>
+    <p class="m-text-2" data-motion="emboss">A business that's easy to find, easy to choose and easy to run. Take one, or combine them. Open any card to see what's included.</p>
+  </div>
+  <div class="svc-grid">
+    <article class="svc">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="0" y="0" width=".84" height=".84"/><rect x="1" y="0" width=".84" height=".84"/><rect x="2" y="0" width=".84" height=".84"/><rect x="3" y="0" width=".84" height=".84"/><rect x="4" y="0" width=".84" height=".84"/><rect x="5" y="0" width=".84" height=".84"/><rect x="6" y="0" width=".84" height=".84"/><rect x="7" y="0" width=".84" height=".84"/><rect x="8" y="0" width=".84" height=".84"/><rect x="0" y="1" width=".84" height=".84"/><rect x="8" y="1" width=".84" height=".84"/><rect x="0" y="2" width=".84" height=".84"/><rect x="2" y="2" width=".84" height=".84"/><rect x="3" y="2" width=".84" height=".84"/><rect x="8" y="2" width=".84" height=".84"/><rect x="0" y="3" width=".84" height=".84"/><rect x="8" y="3" width=".84" height=".84"/><rect x="0" y="4" width=".84" height=".84"/><rect x="2" y="4" width=".84" height=".84"/><rect x="3" y="4" width=".84" height=".84"/><rect x="4" y="4" width=".84" height=".84"/><rect x="5" y="4" width=".84" height=".84"/><rect x="8" y="4" width=".84" height=".84"/><rect x="0" y="5" width=".84" height=".84"/><rect x="1" y="5" width=".84" height=".84"/><rect x="2" y="5" width=".84" height=".84"/><rect x="3" y="5" width=".84" height=".84"/><rect x="4" y="5" width=".84" height=".84"/><rect x="5" y="5" width=".84" height=".84"/><rect x="6" y="5" width=".84" height=".84"/><rect x="7" y="5" width=".84" height=".84"/><rect x="8" y="5" width=".84" height=".84"/><rect x="4" y="6" width=".84" height=".84"/><rect x="2" y="7" width=".84" height=".84"/><rect x="3" y="7" width=".84" height=".84"/><rect x="4" y="7" width=".84" height=".84"/><rect x="5" y="7" width=".84" height=".84"/><rect x="6" y="7" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Get online</p>
+      <h3 class="m-title">Website design &amp; development</h3>
+      <p class="m-text">Your shop window that never closes: fast, modern, mobile-responsive and built to turn visitors into enquiries.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well"><ul>
+          <li>UI/UX design and page layouts, typically Home, About, Services, Gallery and Contact</li>
+          <li>Mobile-responsive design for phones, tablets and desktops</li>
+          <li>Responsive front-end development</li>
+          <li>Content, image and project gallery integration</li>
+          <li>Contact form for lead capture</li>
+          <li>Google Maps location embed</li>
+          <li>One-tap WhatsApp and call buttons</li>
+          <li>Cross-device testing, launch and go-live support</li>
+        </ul><p class="ideal"><b>Ideal for:</b> businesses with no website yet, or an old site that's slow, outdated or not mobile-friendly.</p></div>
+      </details>
+    </article>
+    <article class="svc">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="0" y="0" width=".84" height=".84"/><rect x="1" y="0" width=".84" height=".84"/><rect x="7" y="0" width=".84" height=".84"/><rect x="8" y="0" width=".84" height=".84"/><rect x="0" y="1" width=".84" height=".84"/><rect x="1" y="1" width=".84" height=".84"/><rect x="2" y="1" width=".84" height=".84"/><rect x="6" y="1" width=".84" height=".84"/><rect x="7" y="1" width=".84" height=".84"/><rect x="8" y="1" width=".84" height=".84"/><rect x="0" y="2" width=".84" height=".84"/><rect x="1" y="2" width=".84" height=".84"/><rect x="2" y="2" width=".84" height=".84"/><rect x="3" y="2" width=".84" height=".84"/><rect x="5" y="2" width=".84" height=".84"/><rect x="6" y="2" width=".84" height=".84"/><rect x="7" y="2" width=".84" height=".84"/><rect x="8" y="2" width=".84" height=".84"/><rect x="0" y="3" width=".84" height=".84"/><rect x="1" y="3" width=".84" height=".84"/><rect x="2" y="3" width=".84" height=".84"/><rect x="3" y="3" width=".84" height=".84"/><rect x="4" y="3" width=".84" height=".84"/><rect x="5" y="3" width=".84" height=".84"/><rect x="6" y="3" width=".84" height=".84"/><rect x="7" y="3" width=".84" height=".84"/><rect x="8" y="3" width=".84" height=".84"/><rect x="1" y="4" width=".84" height=".84"/><rect x="2" y="4" width=".84" height=".84"/><rect x="3" y="4" width=".84" height=".84"/><rect x="4" y="4" width=".84" height=".84"/><rect x="5" y="4" width=".84" height=".84"/><rect x="6" y="4" width=".84" height=".84"/><rect x="7" y="4" width=".84" height=".84"/><rect x="2" y="5" width=".84" height=".84"/><rect x="3" y="5" width=".84" height=".84"/><rect x="5" y="5" width=".84" height=".84"/><rect x="6" y="5" width=".84" height=".84"/><rect x="1" y="6" width=".84" height=".84"/><rect x="2" y="6" width=".84" height=".84"/><rect x="3" y="6" width=".84" height=".84"/><rect x="5" y="6" width=".84" height=".84"/><rect x="6" y="6" width=".84" height=".84"/><rect x="7" y="6" width=".84" height=".84"/><rect x="1" y="7" width=".84" height=".84"/><rect x="2" y="7" width=".84" height=".84"/><rect x="6" y="7" width=".84" height=".84"/><rect x="7" y="7" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Get online</p>
+      <h3 class="m-title">Logo &amp; branding</h3>
+      <p class="m-text">An identity that looks good everywhere: your website, social pages, shop board and business card.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well"><ul>
+          <li>Logo design with multiple concepts and revisions</li>
+          <li>Colour palette and font selection</li>
+          <li>Business card design</li>
+          <li>Social media profile and cover graphics</li>
+          <li>Letterhead and invoice design</li>
+          <li>A simple brand guide so your look stays consistent</li>
+        </ul><p class="ideal"><b>Ideal for:</b> new businesses, or businesses ready for a fresh, professional look.</p></div>
+      </details>
+    </article>
+    <article class="svc">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="2" y="0" width=".84" height=".84"/><rect x="3" y="0" width=".84" height=".84"/><rect x="4" y="0" width=".84" height=".84"/><rect x="5" y="0" width=".84" height=".84"/><rect x="1" y="1" width=".84" height=".84"/><rect x="6" y="1" width=".84" height=".84"/><rect x="0" y="2" width=".84" height=".84"/><rect x="7" y="2" width=".84" height=".84"/><rect x="0" y="3" width=".84" height=".84"/><rect x="7" y="3" width=".84" height=".84"/><rect x="0" y="4" width=".84" height=".84"/><rect x="7" y="4" width=".84" height=".84"/><rect x="1" y="5" width=".84" height=".84"/><rect x="6" y="5" width=".84" height=".84"/><rect x="2" y="6" width=".84" height=".84"/><rect x="3" y="6" width=".84" height=".84"/><rect x="4" y="6" width=".84" height=".84"/><rect x="5" y="6" width=".84" height=".84"/><rect x="6" y="6" width=".84" height=".84"/><rect x="7" y="6" width=".84" height=".84"/><rect x="7" y="7" width=".84" height=".84"/><rect x="8" y="7" width=".84" height=".84"/><rect x="8" y="8" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Get found</p>
+      <h3 class="m-title">Search engine optimization</h3>
+      <p class="m-text">We optimise your site so Google understands what you do and shows you to the people searching for it.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well"><ul>
+          <li>On-page SEO: meta titles, descriptions and headings</li>
+          <li>Keyword research for your business and area</li>
+          <li>Site speed improvements</li>
+          <li>XML sitemap creation and submission</li>
+          <li>Local SEO to appear in "near me" searches</li>
+          <li>Google Search Console and Google Analytics setup</li>
+        </ul><p class="ideal"><b>Ideal for:</b> businesses that want to show up when customers search for their service or location.</p></div>
+      </details>
+    </article>
+    <article class="svc">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="1" y="0" width=".84" height=".84"/><rect x="2" y="0" width=".84" height=".84"/><rect x="6" y="0" width=".84" height=".84"/><rect x="7" y="0" width=".84" height=".84"/><rect x="0" y="1" width=".84" height=".84"/><rect x="1" y="1" width=".84" height=".84"/><rect x="2" y="1" width=".84" height=".84"/><rect x="3" y="1" width=".84" height=".84"/><rect x="5" y="1" width=".84" height=".84"/><rect x="6" y="1" width=".84" height=".84"/><rect x="7" y="1" width=".84" height=".84"/><rect x="8" y="1" width=".84" height=".84"/><rect x="0" y="2" width=".84" height=".84"/><rect x="1" y="2" width=".84" height=".84"/><rect x="2" y="2" width=".84" height=".84"/><rect x="3" y="2" width=".84" height=".84"/><rect x="4" y="2" width=".84" height=".84"/><rect x="5" y="2" width=".84" height=".84"/><rect x="6" y="2" width=".84" height=".84"/><rect x="7" y="2" width=".84" height=".84"/><rect x="8" y="2" width=".84" height=".84"/><rect x="0" y="3" width=".84" height=".84"/><rect x="1" y="3" width=".84" height=".84"/><rect x="2" y="3" width=".84" height=".84"/><rect x="3" y="3" width=".84" height=".84"/><rect x="4" y="3" width=".84" height=".84"/><rect x="5" y="3" width=".84" height=".84"/><rect x="6" y="3" width=".84" height=".84"/><rect x="7" y="3" width=".84" height=".84"/><rect x="8" y="3" width=".84" height=".84"/><rect x="1" y="4" width=".84" height=".84"/><rect x="2" y="4" width=".84" height=".84"/><rect x="3" y="4" width=".84" height=".84"/><rect x="4" y="4" width=".84" height=".84"/><rect x="5" y="4" width=".84" height=".84"/><rect x="6" y="4" width=".84" height=".84"/><rect x="7" y="4" width=".84" height=".84"/><rect x="2" y="5" width=".84" height=".84"/><rect x="3" y="5" width=".84" height=".84"/><rect x="4" y="5" width=".84" height=".84"/><rect x="5" y="5" width=".84" height=".84"/><rect x="6" y="5" width=".84" height=".84"/><rect x="3" y="6" width=".84" height=".84"/><rect x="4" y="6" width=".84" height=".84"/><rect x="5" y="6" width=".84" height=".84"/><rect x="4" y="7" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Get found</p>
+      <h3 class="m-title">Social media optimization</h3>
+      <p class="m-text">Instagram and Facebook pages that look professional, consistent and ready to convert.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well"><ul>
+          <li>Instagram and Facebook business profile setup</li>
+          <li>Profile optimisation: bio, categories, contact buttons, links</li>
+          <li>Profile and cover images in your brand style</li>
+          <li>Starter creatives and launch posts</li>
+          <li>Linking social profiles with your website and Google listing</li>
+        </ul><p class="ideal"><b>Ideal for:</b> businesses starting on social media, or with pages that look unfinished or inconsistent.</p></div>
+      </details>
+    </article>
+    <article class="svc">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="2" y="0" width=".84" height=".84"/><rect x="3" y="0" width=".84" height=".84"/><rect x="4" y="0" width=".84" height=".84"/><rect x="5" y="0" width=".84" height=".84"/><rect x="6" y="0" width=".84" height=".84"/><rect x="1" y="1" width=".84" height=".84"/><rect x="2" y="1" width=".84" height=".84"/><rect x="3" y="1" width=".84" height=".84"/><rect x="4" y="1" width=".84" height=".84"/><rect x="5" y="1" width=".84" height=".84"/><rect x="6" y="1" width=".84" height=".84"/><rect x="7" y="1" width=".84" height=".84"/><rect x="0" y="2" width=".84" height=".84"/><rect x="1" y="2" width=".84" height=".84"/><rect x="2" y="2" width=".84" height=".84"/><rect x="6" y="2" width=".84" height=".84"/><rect x="7" y="2" width=".84" height=".84"/><rect x="8" y="2" width=".84" height=".84"/><rect x="0" y="3" width=".84" height=".84"/><rect x="1" y="3" width=".84" height=".84"/><rect x="2" y="3" width=".84" height=".84"/><rect x="6" y="3" width=".84" height=".84"/><rect x="7" y="3" width=".84" height=".84"/><rect x="8" y="3" width=".84" height=".84"/><rect x="0" y="4" width=".84" height=".84"/><rect x="1" y="4" width=".84" height=".84"/><rect x="2" y="4" width=".84" height=".84"/><rect x="3" y="4" width=".84" height=".84"/><rect x="4" y="4" width=".84" height=".84"/><rect x="5" y="4" width=".84" height=".84"/><rect x="6" y="4" width=".84" height=".84"/><rect x="7" y="4" width=".84" height=".84"/><rect x="8" y="4" width=".84" height=".84"/><rect x="1" y="5" width=".84" height=".84"/><rect x="2" y="5" width=".84" height=".84"/><rect x="3" y="5" width=".84" height=".84"/><rect x="4" y="5" width=".84" height=".84"/><rect x="5" y="5" width=".84" height=".84"/><rect x="6" y="5" width=".84" height=".84"/><rect x="7" y="5" width=".84" height=".84"/><rect x="2" y="6" width=".84" height=".84"/><rect x="3" y="6" width=".84" height=".84"/><rect x="4" y="6" width=".84" height=".84"/><rect x="5" y="6" width=".84" height=".84"/><rect x="6" y="6" width=".84" height=".84"/><rect x="3" y="7" width=".84" height=".84"/><rect x="4" y="7" width=".84" height=".84"/><rect x="5" y="7" width=".84" height=".84"/><rect x="4" y="8" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Get found</p>
+      <h3 class="m-title">Google Business Profile setup</h3>
+      <p class="m-text">When someone searches "bakery near me", Google shows a map of businesses. We get you on that map.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well"><ul>
+          <li>Google Business Profile creation and verification support</li>
+          <li>Complete profile optimisation: categories, hours, services, photos, description</li>
+          <li>Website, phone and WhatsApp links</li>
+          <li>Guidance on collecting customer reviews</li>
+        </ul><p class="ideal"><b>Ideal for:</b> any business that serves customers in a specific area.</p></div>
+      </details>
+    </article>
+    <article class="svc svc--hot">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="8" y="0" width=".84" height=".84"/><rect x="6" y="1" width=".84" height=".84"/><rect x="8" y="1" width=".84" height=".84"/><rect x="6" y="2" width=".84" height=".84"/><rect x="8" y="2" width=".84" height=".84"/><rect x="4" y="3" width=".84" height=".84"/><rect x="6" y="3" width=".84" height=".84"/><rect x="8" y="3" width=".84" height=".84"/><rect x="4" y="4" width=".84" height=".84"/><rect x="6" y="4" width=".84" height=".84"/><rect x="8" y="4" width=".84" height=".84"/><rect x="2" y="5" width=".84" height=".84"/><rect x="4" y="5" width=".84" height=".84"/><rect x="6" y="5" width=".84" height=".84"/><rect x="8" y="5" width=".84" height=".84"/><rect x="2" y="6" width=".84" height=".84"/><rect x="4" y="6" width=".84" height=".84"/><rect x="6" y="6" width=".84" height=".84"/><rect x="8" y="6" width=".84" height=".84"/><rect x="0" y="7" width=".84" height=".84"/><rect x="2" y="7" width=".84" height=".84"/><rect x="4" y="7" width=".84" height=".84"/><rect x="6" y="7" width=".84" height=".84"/><rect x="8" y="7" width=".84" height=".84"/><rect x="0" y="8" width=".84" height=".84"/><rect x="1" y="8" width=".84" height=".84"/><rect x="2" y="8" width=".84" height=".84"/><rect x="3" y="8" width=".84" height=".84"/><rect x="4" y="8" width=".84" height=".84"/><rect x="5" y="8" width=".84" height=".84"/><rect x="6" y="8" width=".84" height=".84"/><rect x="7" y="8" width=".84" height=".84"/><rect x="8" y="8" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Grow faster <b>New</b></p>
+      <h3 class="m-title">Performance marketing</h3>
+      <p class="m-text">Paid campaigns on Google, Instagram and Facebook, measured by the enquiries they bring in.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well"><ul>
+          <li>Google Search and Maps ads</li>
+          <li>Instagram and Facebook ads for your area and audience</li>
+          <li>Ad copy, creatives and landing pages</li>
+          <li>Conversion tracking for calls, WhatsApp taps and forms</li>
+          <li>Retargeting and a monthly cost-per-enquiry report</li>
+        </ul><p class="ideal"><b>Ideal for:</b> businesses with a working website that want more enquiries now. <a class="m-link" href="#growth">How it works</a></p></div>
+      </details>
+    </article>
+    <article class="svc svc--hot">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="0" y="0" width=".84" height=".84"/><rect x="1" y="0" width=".84" height=".84"/><rect x="2" y="0" width=".84" height=".84"/><rect x="3" y="0" width=".84" height=".84"/><rect x="4" y="0" width=".84" height=".84"/><rect x="5" y="0" width=".84" height=".84"/><rect x="6" y="0" width=".84" height=".84"/><rect x="7" y="0" width=".84" height=".84"/><rect x="8" y="0" width=".84" height=".84"/><rect x="0" y="1" width=".84" height=".84"/><rect x="8" y="1" width=".84" height=".84"/><rect x="0" y="2" width=".84" height=".84"/><rect x="2" y="2" width=".84" height=".84"/><rect x="4" y="2" width=".84" height=".84"/><rect x="6" y="2" width=".84" height=".84"/><rect x="8" y="2" width=".84" height=".84"/><rect x="0" y="3" width=".84" height=".84"/><rect x="8" y="3" width=".84" height=".84"/><rect x="0" y="4" width=".84" height=".84"/><rect x="1" y="4" width=".84" height=".84"/><rect x="2" y="4" width=".84" height=".84"/><rect x="3" y="4" width=".84" height=".84"/><rect x="4" y="4" width=".84" height=".84"/><rect x="5" y="4" width=".84" height=".84"/><rect x="6" y="4" width=".84" height=".84"/><rect x="7" y="4" width=".84" height=".84"/><rect x="8" y="4" width=".84" height=".84"/><rect x="1" y="5" width=".84" height=".84"/><rect x="2" y="5" width=".84" height=".84"/><rect x="1" y="6" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Grow faster <b>New</b></p>
+      <h3 class="m-title">Marketing automation</h3>
+      <p class="m-text">Replies, reminders and review requests that send themselves on WhatsApp, email and SMS.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well"><ul>
+          <li>Enquiries from every channel captured in one place</li>
+          <li>Instant replies and scheduled follow-ups</li>
+          <li>Quote, payment and appointment reminders</li>
+          <li>Review requests after each completed job</li>
+          <li>A dashboard showing where each enquiry stands</li>
+        </ul><p class="ideal"><b>Ideal for:</b> businesses that lose enquiries because nobody followed up in time. <a class="m-link" href="#growth">How it works</a></p></div>
+      </details>
+    </article>
+    <article class="svc">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="1" y="0" width=".84" height=".84"/><rect x="2" y="0" width=".84" height=".84"/><rect x="3" y="0" width=".84" height=".84"/><rect x="4" y="0" width=".84" height=".84"/><rect x="5" y="0" width=".84" height=".84"/><rect x="6" y="0" width=".84" height=".84"/><rect x="7" y="0" width=".84" height=".84"/><rect x="1" y="1" width=".84" height=".84"/><rect x="7" y="1" width=".84" height=".84"/><rect x="1" y="2" width=".84" height=".84"/><rect x="3" y="2" width=".84" height=".84"/><rect x="4" y="2" width=".84" height=".84"/><rect x="5" y="2" width=".84" height=".84"/><rect x="7" y="2" width=".84" height=".84"/><rect x="1" y="3" width=".84" height=".84"/><rect x="7" y="3" width=".84" height=".84"/><rect x="1" y="4" width=".84" height=".84"/><rect x="3" y="4" width=".84" height=".84"/><rect x="4" y="4" width=".84" height=".84"/><rect x="5" y="4" width=".84" height=".84"/><rect x="7" y="4" width=".84" height=".84"/><rect x="1" y="5" width=".84" height=".84"/><rect x="7" y="5" width=".84" height=".84"/><rect x="1" y="6" width=".84" height=".84"/><rect x="3" y="6" width=".84" height=".84"/><rect x="4" y="6" width=".84" height=".84"/><rect x="7" y="6" width=".84" height=".84"/><rect x="1" y="7" width=".84" height=".84"/><rect x="7" y="7" width=".84" height=".84"/><rect x="1" y="8" width=".84" height=".84"/><rect x="3" y="8" width=".84" height=".84"/><rect x="5" y="8" width=".84" height=".84"/><rect x="7" y="8" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Run smarter</p>
+      <h3 class="m-title">ERP &amp; billing software</h3>
+      <p class="m-text">Custom, web-based billing designed around how your business actually works, not a generic tool.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well"><ul>
+          <li>Custom-built billing system that works from any browser</li>
+          <li>Invoices and quotations with your logo and details</li>
+          <li>GST-ready billing</li>
+          <li>Customer records with purchase history</li>
+          <li>Payment tracking (paid, pending, overdue) and reminders</li>
+          <li>Sales, expense and profit reports, and dashboards</li>
+          <li>Setup, training for your team, and ongoing support</li>
+        </ul><p class="ideal"><b>Ideal for:</b> businesses still billing on paper or spreadsheets, or using software that doesn't fit how they work.</p></div>
+      </details>
+    </article>
+    <article class="svc">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="3" y="0" width=".84" height=".84"/><rect x="5" y="0" width=".84" height=".84"/><rect x="1" y="1" width=".84" height=".84"/><rect x="2" y="1" width=".84" height=".84"/><rect x="3" y="1" width=".84" height=".84"/><rect x="4" y="1" width=".84" height=".84"/><rect x="5" y="1" width=".84" height=".84"/><rect x="6" y="1" width=".84" height=".84"/><rect x="7" y="1" width=".84" height=".84"/><rect x="1" y="2" width=".84" height=".84"/><rect x="2" y="2" width=".84" height=".84"/><rect x="6" y="2" width=".84" height=".84"/><rect x="7" y="2" width=".84" height=".84"/><rect x="0" y="3" width=".84" height=".84"/><rect x="1" y="3" width=".84" height=".84"/><rect x="7" y="3" width=".84" height=".84"/><rect x="8" y="3" width=".84" height=".84"/><rect x="1" y="4" width=".84" height=".84"/><rect x="7" y="4" width=".84" height=".84"/><rect x="0" y="5" width=".84" height=".84"/><rect x="1" y="5" width=".84" height=".84"/><rect x="7" y="5" width=".84" height=".84"/><rect x="8" y="5" width=".84" height=".84"/><rect x="1" y="6" width=".84" height=".84"/><rect x="2" y="6" width=".84" height=".84"/><rect x="6" y="6" width=".84" height=".84"/><rect x="7" y="6" width=".84" height=".84"/><rect x="1" y="7" width=".84" height=".84"/><rect x="2" y="7" width=".84" height=".84"/><rect x="3" y="7" width=".84" height=".84"/><rect x="4" y="7" width=".84" height=".84"/><rect x="5" y="7" width=".84" height=".84"/><rect x="6" y="7" width=".84" height=".84"/><rect x="7" y="7" width=".84" height=".84"/><rect x="3" y="8" width=".84" height=".84"/><rect x="5" y="8" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Run smarter</p>
+      <h3 class="m-title">Business optimization</h3>
+      <p class="m-text">We find where time, money and customers are slipping away, behind the counter and online. Then we fix it.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well">
+          <h4>Operations &amp; automation</h4>
+          <ul>
+            <li>Review of your current workflows and daily tasks</li>
+            <li>Spotting repetitive manual work that can be automated</li>
+            <li>Automating invoicing, reminders, enquiry follow-ups and reports</li>
+            <li>Connecting your tools so data is entered once, not twice</li>
+          </ul>
+          <h4>Digital growth</h4>
+          <ul>
+            <li>Audit of your website, Google listing and social media</li>
+            <li>Review of how enquiries come in and where they drop off</li>
+            <li>A clear, prioritised action plan to bring in more customers</li>
+          </ul>
+          <p class="ideal"><b>Ideal for:</b> growing businesses where the owner spends too much time on admin, or whose online presence isn't bringing in enquiries.</p></div>
+      </details>
+    </article>
+    <article class="svc">
+      <div class="svc__swatch m-well"><svg class="px" viewBox="-.08 -.08 9 9" aria-hidden="true" focusable="false"><rect x="0" y="0" width=".84" height=".84"/><rect x="1" y="0" width=".84" height=".84"/><rect x="2" y="0" width=".84" height=".84"/><rect x="3" y="0" width=".84" height=".84"/><rect x="4" y="0" width=".84" height=".84"/><rect x="5" y="0" width=".84" height=".84"/><rect x="6" y="0" width=".84" height=".84"/><rect x="7" y="0" width=".84" height=".84"/><rect x="8" y="0" width=".84" height=".84"/><rect x="0" y="1" width=".84" height=".84"/><rect x="8" y="1" width=".84" height=".84"/><rect x="0" y="2" width=".84" height=".84"/><rect x="6" y="2" width=".84" height=".84"/><rect x="8" y="2" width=".84" height=".84"/><rect x="0" y="3" width=".84" height=".84"/><rect x="5" y="3" width=".84" height=".84"/><rect x="8" y="3" width=".84" height=".84"/><rect x="0" y="4" width=".84" height=".84"/><rect x="1" y="4" width=".84" height=".84"/><rect x="4" y="4" width=".84" height=".84"/><rect x="7" y="4" width=".84" height=".84"/><rect x="8" y="4" width=".84" height=".84"/><rect x="1" y="5" width=".84" height=".84"/><rect x="3" y="5" width=".84" height=".84"/><rect x="7" y="5" width=".84" height=".84"/><rect x="1" y="6" width=".84" height=".84"/><rect x="2" y="6" width=".84" height=".84"/><rect x="6" y="6" width=".84" height=".84"/><rect x="7" y="6" width=".84" height=".84"/><rect x="2" y="7" width=".84" height=".84"/><rect x="3" y="7" width=".84" height=".84"/><rect x="5" y="7" width=".84" height=".84"/><rect x="6" y="7" width=".84" height=".84"/><rect x="3" y="8" width=".84" height=".84"/><rect x="4" y="8" width=".84" height=".84"/><rect x="5" y="8" width=".84" height=".84"/></svg></div>
+      <p class="m-text-3 svc__tag">Run smarter</p>
+      <h3 class="m-title">Website maintenance &amp; support</h3>
+      <p class="m-text">Care after launch, so your site stays fast, secure and current while you focus on your business.</p>
+      <details><summary class="m-link">What's included <span class="plus" aria-hidden="true"></span></summary>
+        <div class="svc__body m-well"><ul>
+          <li>Domain and hosting setup and management</li>
+          <li>Regular updates and security checks</li>
+          <li>Content updates: new photos, services, offers and projects</li>
+          <li>Backups and bug fixes</li>
+          <li>Speed and uptime monitoring</li>
+          <li>Priority support by phone and WhatsApp</li>
+        </ul><p class="ideal"><b>Ideal for:</b> any business that wants its website kept current without the hassle.</p></div>
+      </details>
+    </article>
+  </div>
+</section>
+
+<!-- Why us -->
+<section class="sec why m-mint" id="why" data-section="why" aria-labelledby="why-title">
+  <div class="head">
+    <h2 class="m-cut" id="why-title" data-motion="press">Why choose us?</h2>
+    <p class="m-text-2" data-motion="emboss">Seven reasons to give one team your whole online presence.</p>
+  </div>
+  <ul class="why-list">
+    <li data-motion="emboss"><h3 class="m-title">One team, everything online</h3><p>Website, SEO, social media, Google Business Profile, branding, ads and billing software, under one roof, working as one plan.</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Built to bring enquiries</h3><p>Every site comes with a contact form, Google Maps, and a one-tap WhatsApp or call button, so visitors become customers.</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Mobile-first</h3><p>Most of your customers will find you on their phone. Every design is built and tested for mobile, tablet and desktop.</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Found on Google</h3><p>On-page SEO, a sitemap, Google Search Console and Google Analytics are set up from day one, not sold as an afterthought.</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Clear, itemised quotes</h3><p>You see exactly what each part of your project covers. No hidden charges.</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Direct access to the founders</h3><p>Call or WhatsApp the people actually building your project.</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Support after launch</h3><p>Updates, fixes and maintenance plans keep your site fast, secure and current.</p></li>
+  </ul>
+</section>
+
+<!-- How we work -->
+<section id="process" data-section="process" aria-labelledby="process-title">
+  <div class="process__stage">
+    <div class="head process__head">
+      <h2 class="m-cut" id="process-title" data-motion="press">First call to live, in six moves</h2>
+      <p class="m-text-2" data-motion="emboss">Each move leaves something you can see and approve before the next one starts.</p>
+    </div>
+    <div class="process__channel m-ply">
+      <ol class="process__track">
+        <li class="process__intro">
+          <p class="m-text-2">Six simple steps from first call to a live, working online presence.</p>
+          <p class="m-text">Most small business websites go live in 2–4 weeks, depending on the number of pages and how quickly content and feedback come in.</p>
+        </li>
+        <li class="step m-surface" data-step="discover">
+          <p class="m-text-3">Step 1</p><h3 class="m-title">Discover</h3>
+          <p class="m-text">We talk about your business, your customers and your goals, and look at what you already have online.</p>
+          <div class="step__visual" aria-hidden="true"><svg viewBox="0 0 220 130"><circle class="draw" pathLength="1" cx="96" cy="56" r="36"/><path class="draw" pathLength="1" d="M122 82 L160 118"/><path class="dash" d="M72 50 h48 M72 62 h34"/></svg></div>
+        </li>
+        <li class="step m-surface" data-step="plan">
+          <p class="m-text-3">Step 2</p><h3 class="m-title">Plan &amp; quote</h3>
+          <p class="m-text">You get a clear, itemised proposal: what we'll build, what's included, and the timeline.</p>
+          <div class="step__visual" aria-hidden="true"><svg viewBox="0 0 220 130"><rect class="draw" pathLength="1" x="56" y="6" width="108" height="118" rx="4"/><path class="draw line" pathLength="1" d="M72 30 h76"/><path class="draw line" pathLength="1" d="M72 48 h60"/><path class="draw line" pathLength="1" d="M72 66 h70"/><path class="draw line" pathLength="1" d="M72 84 h50"/><path class="draw line" pathLength="1" d="M72 106 h76" style="stroke-width:3.4"/></svg></div>
+        </li>
+        <li class="step m-surface" data-step="design">
+          <p class="m-text-3">Step 3</p><h3 class="m-title">Design</h3>
+          <p class="m-text">We design your pages and brand visuals and share them with you for feedback before any build begins.</p>
+          <div class="step__visual" aria-hidden="true"><svg viewBox="0 0 220 130"><path class="draw cutline" pathLength="1" d="M30 8 H190 V122 H30 Z M30 30 H190 M44 44 H120 V96 H44 Z M134 44 H176 V66 H134 Z M134 76 H176 V96 H134 Z"/><path class="dash score" d="M44 108 H176"/></svg></div>
+        </li>
+        <li class="step m-surface" data-step="build">
+          <p class="m-text-3">Step 4</p><h3 class="m-title">Build</h3>
+          <p class="m-text">We develop the site, add your content and gallery, and connect your contact form, maps, WhatsApp and call buttons.</p>
+          <div class="step__visual" aria-hidden="true"><svg viewBox="0 0 220 130"><g class="tiles"><rect class="tile" x="44" y="12" width="30" height="30" rx="3"/><rect class="tile" x="80" y="12" width="30" height="30" rx="3"/><rect class="tile" x="116" y="12" width="30" height="30" rx="3"/><rect class="tile" x="152" y="12" width="30" height="30" rx="3"/><rect class="tile" x="44" y="50" width="30" height="30" rx="3"/><rect class="tile" x="80" y="50" width="30" height="30" rx="3"/><rect class="tile" x="116" y="50" width="30" height="30" rx="3"/><rect class="tile" x="152" y="50" width="30" height="30" rx="3"/><rect class="tile" x="44" y="88" width="30" height="30" rx="3"/><rect class="tile" x="80" y="88" width="30" height="30" rx="3"/><rect class="tile" x="116" y="88" width="30" height="30" rx="3"/><rect class="tile" x="152" y="88" width="30" height="30" rx="3"/></g></svg></div>
+        </li>
+        <li class="step m-surface" data-step="launch">
+          <p class="m-text-3">Step 5</p><h3 class="m-title">Optimise &amp; launch</h3>
+          <p class="m-text">We set up SEO, Google Business Profile and social pages, test on every device, and go live.</p>
+          <div class="step__visual" aria-hidden="true"><svg viewBox="0 0 220 130"><g class="res"><rect x="40" y="10" width="140" height="22" rx="4"/><rect x="40" y="40" width="140" height="22" rx="4"/><rect x="40" y="70" width="140" height="22" rx="4"/><rect class="me" x="40" y="100" width="140" height="22" rx="4"/></g></svg></div>
+        </li>
+        <li class="step m-surface" data-step="grow">
+          <p class="m-text-3">Step 6</p><h3 class="m-title">Support &amp; grow</h3>
+          <p class="m-text">After launch, we keep your site updated and help you build on what's working.</p>
+          <div class="step__visual" aria-hidden="true"><svg viewBox="0 0 220 130"><g class="bar-g"><rect x="44" y="84" width="24" height="40" rx="3"/><rect x="78" y="70" width="24" height="54" rx="3"/><rect x="112" y="52" width="24" height="72" rx="3"/><rect x="146" y="22" width="24" height="102" rx="3"/></g><path class="dash" d="M36 124 H184"/></svg></div>
+        </li>
+        <li class="process__end">
+          <h3 class="m-title">Your move.</h3>
+          <p class="m-text">A free first call, a clear itemised quote, and no work begins until you say yes.</p>
+          <p><a class="m-btn m-btn--mint" href="#contact">Book the first call</a></p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Studio: about, mission, founders -->
+<section class="studio" id="studio" data-section="studio" aria-labelledby="studio-title">
+  <div class="studio__tray m-ply">
+    <h2 class="studio__title m-raised" id="studio-title" data-motion="emboss">One team, not ten vendors.</h2>
+    <p class="studio__lead m-text-2" data-motion="emboss">Pick your Pixel is a digital studio that takes businesses online, end to end. We design and build websites, get them found on Google, set up social media, and shape the brand that ties it all together.</p>
+    <div class="studio__story" data-motion="emboss">
+      <p class="m-text">We also build custom billing software and help businesses run more efficiently, inside and online.</p>
+      <p class="m-text">Most businesses don't need ten different vendors. They need one team that understands how a website, a Google listing and an Instagram page work together to bring in enquiries. That's what we do.</p>
+    </div>
+    <blockquote class="studio__quote" data-motion="emboss">
+      <p class="m-title">To give every business, whether a neighbourhood shop or a growing company, a professional online presence that brings in real customers, not just likes.</p>
+      <footer class="m-text-3">Our mission</footer>
+    </blockquote>
+    <div class="people">
+      <div class="person m-surface" data-motion="emboss">
+        <span class="initial m-ply" aria-hidden="true">G</span>
+        <div><h3 class="m-title">Gokul</h3><p class="m-text">Co-founder</p></div>
+        <p class="person-links"><a class="m-link" href="tel:+918870297917">+91 88702 97917</a><a class="m-link" href="https://wa.me/918870297917" target="_blank" rel="noopener">WhatsApp</a></p>
+      </div>
+      <div class="person m-surface" data-motion="emboss">
+        <span class="initial m-ply" aria-hidden="true">A</span>
+        <div><h3 class="m-title">Ashwin</h3><p class="m-text">Co-founder</p></div>
+        <p class="person-links"><a class="m-link" href="tel:+919047352704">+91 90473 52704</a><a class="m-link" href="https://wa.me/919047352704" target="_blank" rel="noopener">WhatsApp</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who we work with -->
+<section class="sec" id="who" data-section="who" aria-labelledby="who-title" style="padding-top:0">
+  <div class="head">
+    <h2 class="m-cut" id="who-title" data-motion="press">Who we work with</h2>
+    <p class="m-text-2" data-motion="emboss">Any business that wants more customers to find it online. We're a great fit for these.</p>
+  </div>
+  <ul class="who-list">
+    <li data-motion="emboss"><h3 class="m-title">Local services</h3><p class="m-text">Landscapers, contractors, interior designers, cleaning and repair services</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Shops &amp; retail</h3><p class="m-text">Boutiques, showrooms, bakeries, home-grown brands</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Food &amp; hospitality</h3><p class="m-text">Restaurants, cafés, caterers, homestays</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Health &amp; wellness</h3><p class="m-text">Clinics, dentists, gyms, salons, yoga studios</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Professionals</h3><p class="m-text">Consultants, architects, lawyers, chartered accountants</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Education</h3><p class="m-text">Schools, coaching centres, tutors, training institutes</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Startups</h3><p class="m-text">New brands launching from scratch and needing everything at once</p></li>
+    <li data-motion="emboss"><h3 class="m-title">Events &amp; creative</h3><p class="m-text">Photographers, event planners, wedding services</p></li>
+  </ul>
+  <p class="who-foot">Not on the list? If your customers search online, we can help.</p>
+</section>
+
+<!-- Packages -->
+<section class="kit" id="packages" data-section="packages" aria-labelledby="packages-title">
+  <div class="kit__lid m-surface">
+    <div class="kit__intro">
+      <h2 class="m-cut" id="packages-title">Choose your package</h2>
+      <p class="m-text-2">Every business is different, so every quote is tailored. These are a starting point: mix, match or ask us for a custom plan.</p>
+      <p class="m-text">Performance marketing, marketing automation, ERP &amp; billing software and business optimization are quoted separately, based on your business's needs.</p>
+      <div class="kit__actions">
+        <a class="m-btn m-btn--ink" href="#contact">Get a free, itemised quote</a>
+        <a class="m-link" href="#growth">About ads and automation</a>
+      </div>
+    </div>
+    <div class="kit__rows">
+      <div class="kit__row"><h3 class="m-title">Get Found</h3><p class="m-text-2">Businesses that need to appear on Google fast</p><p class="m-text">Google Business Profile setup, Instagram and Facebook profile setup, starter creatives</p></div>
+      <div class="kit__row"><h3 class="m-title">Get Online</h3><p class="m-text-2">Businesses ready for their first website</p><p class="m-text">Website design and development, contact form, Google Maps, WhatsApp and call buttons, Google Business Profile</p></div>
+      <div class="kit__row"><h3 class="m-title">Get Growing</h3><p class="m-text-2">Businesses that want the complete package</p><p class="m-text">Everything in Get Online, plus on-page SEO, local SEO, Search Console and Analytics, social media optimisation</p></div>
+      <div class="kit__row"><h3 class="m-title">Brand New</h3><p class="m-text-2">New businesses starting from zero</p><p class="m-text">Logo and brand identity, business cards, plus everything in Get Growing</p></div>
+      <div class="kit__row"><h3 class="m-title">Care Plan</h3><p class="m-text-2">Any business with a website</p><p class="m-text">Hosting, domain, updates, backups, content changes and priority support</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- On the workbench: add another <li> to list a new project -->
+<section class="sec" id="work" data-section="work" aria-labelledby="work-title" style="padding-top:0">
+  <div class="head">
+    <h2 class="m-cut" id="work-title" data-motion="press">On the workbench</h2>
+    <p class="m-text-2" data-motion="emboss">Projects we are building right now. Take a look at the work in progress.</p>
+  </div>
+  <ul class="work-list">
+    <li data-motion="emboss"><a class="m-surface" href="https://rangaaroots.pickurpixel.com/"><h3 class="m-title">Rangaa Roots</h3><span class="m-icon" aria-hidden="true">&#8599;</span><p class="m-text">A2 bilona ghee and traditional foods from Tamil Nadu</p></a></li>
+    <li data-motion="emboss"><a class="m-surface" href="https://twistywrapenterprises.com/"><h3 class="m-title">Twisty</h3><span class="m-icon" aria-hidden="true">&#8599;</span><p class="m-text">Twisty Wrap Enterprises: packaging and industrial supplies</p></a></li>
+  </ul>
+</section>
+
+<!-- Questions -->
+<section class="sec" id="faq" data-section="faq" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="faq">
+    <div>
+      <h2 class="m-cut faq__title" id="faq-title" data-motion="press">Before you ask</h2>
+      <p class="m-text-2 faq__lead" data-motion="emboss">The questions we hear most. Anything else, call or WhatsApp us.</p>
+    </div>
+    <div class="faq__list">
+      <details class="faq__item" name="faq"><summary><span class="m-title">How long does a website take?</span><span class="plus" aria-hidden="true"></span></summary><p class="m-text">Most small business websites go live in 2–4 weeks, depending on the number of pages and how quickly content and feedback come in.</p></details>
+      <details class="faq__item" name="faq"><summary><span class="m-title">Do I need to write the content myself?</span><span class="plus" aria-hidden="true"></span></summary><p class="m-text">No. Share the basics about your business and we'll help shape the text. Photos of your work make the biggest difference.</p></details>
+      <details class="faq__item" name="faq"><summary><span class="m-title">Will my website work on mobile?</span><span class="plus" aria-hidden="true"></span></summary><p class="m-text">Yes. Every site is designed mobile-first and tested on phones, tablets and desktops before launch.</p></details>
+      <details class="faq__item" name="faq"><summary><span class="m-title">Will I show up on Google?</span><span class="plus" aria-hidden="true"></span></summary><p class="m-text">We set up SEO, Search Console and your Google Business Profile so Google can find and list you. Rankings build over time, and local searches usually respond fastest.</p></details>
+      <details class="faq__item" name="faq"><summary><span class="m-title">Can I update the website later?</span><span class="plus" aria-hidden="true"></span></summary><p class="m-text">Yes. Small changes can be handled under a Care Plan, or we can quote for larger updates as you grow.</p></details>
+      <details class="faq__item" name="faq"><summary><span class="m-title">Do you provide hosting and a domain?</span><span class="plus" aria-hidden="true"></span></summary><p class="m-text">Yes. We can register your domain and set up hosting, or work with what you already have.</p></details>
+      <details class="faq__item" name="faq"><summary><span class="m-title">How does payment work?</span><span class="plus" aria-hidden="true"></span></summary><p class="m-text">50% in advance when you confirm the project, and the remaining 50% on launch.</p></details>
+      <details class="faq__item" name="faq"><summary><span class="m-title">Can you build billing software just for my business?</span><span class="plus" aria-hidden="true"></span></summary><p class="m-text">Yes. We build it around your workflow (your invoice format, your customers, your reports) rather than selling you a one-size-fits-all tool. It's web-based, so it works from any browser, and we train your team and support you after go-live.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" data-section="contact" aria-labelledby="contact-title">
+  <div class="contact__light" aria-hidden="true"></div>
+  <h2 class="contact__title" id="contact-title">
+    <span class="contact__line contact__line--raised"><span class="contact__channel m-ply m-slot"><span class="contact__word m-raised">Ready to get</span></span></span>
+    <span class="contact__line contact__line--cut"><span class="contact__word m-cut">your business</span></span>
+    <span class="contact__line contact__line--cut"><span class="contact__word m-cut m-cut--blue">online?</span></span>
+  </h2>
+  <div class="contact__body">
+    <form class="contact__form" id="brief" novalidate>
+      <p class="m-text-2">Tell us about your business. We reply with a free consultation and an itemised quote.</p>
+      <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-biz">Business</label><input id="f-biz" name="business" autocomplete="organization"></div>
+      <div class="field"><label for="f-phone">Phone or WhatsApp</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"></div>
+      <div class="field"><label for="f-city">City</label><input id="f-city" name="city" autocomplete="address-level2"></div>
+      <div class="field wide"><label for="f-need">What do you need?</label><textarea id="f-need" name="need" placeholder="A website, Google listing, ads, billing software…"></textarea></div>
+      <div class="contact__send">
+        <button class="m-btn m-btn--ink" type="submit">Send on WhatsApp</button>
+        <small>WhatsApp opens with your message ready. Nothing is sent until you tap send.</small>
+      </div>
+    </form>
+    <dl class="contact__details">
+      <div><dt class="m-text-3">Gokul, co-founder</dt><dd><a class="m-link" href="tel:+918870297917">+91 88702 97917</a></dd></div>
+      <div><dt class="m-text-3">Ashwin, co-founder</dt><dd><a class="m-link" href="tel:+919047352704">+91 90473 52704</a></dd></div>
+      <div><dt class="m-text-3">Write</dt><dd><a class="m-link" href="mailto:queries@pickurpixel.com">queries@pickurpixel.com</a></dd></div>
+      <div><dt class="m-text-3">Website</dt><dd>pickurpixel.com</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer id="footer" data-section="footer">
+  <div class="footer__tray">
+    <p class="footer__mark m-raised" aria-hidden="true" data-motion="emboss">Pick your Pixel</p>
+    <span class="footer__crease" aria-hidden="true" data-motion="crease"></span>
+    <div class="footer__cols">
+      <div class="footer__col">
+        <img src="assets/pickyourpixel-logo-192.webp?v=2026-11-02" width="169" height="96" alt="Pick your Pixel" loading="lazy" decoding="async" style="height:64px;width:auto">
+        <p class="m-text">Every pixel, picked with purpose.</p>
+      </div>
+      <nav class="footer__col" aria-label="Footer">
+        <p class="m-text-3">Pages</p>
+        <ul><li><a class="m-link" href="#services">Services</a></li><li><a class="m-link" href="#growth">Ads &amp; automation</a></li><li><a class="m-link" href="#process">How we work</a></li><li><a class="m-link" href="#packages">Packages</a></li><li><a class="m-link" href="#faq">Questions</a></li></ul>
+      </nav>
+      <div class="footer__col">
+        <p class="m-text-3">Call or WhatsApp</p>
+        <ul><li><a class="m-link" href="tel:+918870297917">Gokul +91 88702 97917</a></li><li><a class="m-link" href="tel:+919047352704">Ashwin +91 90473 52704</a></li></ul>
+      </div>
+      <div class="footer__col">
+        <p class="m-text-3">Write</p>
+        <ul><li><a class="m-link" href="mailto:queries@pickurpixel.com">queries@pickurpixel.com</a></li></ul>
+        <p class="m-text">Free consultation, itemised quote.</p>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p>&copy; <span id="yr">2026</span> Pick your Pixel. All rights reserved.</p>
+      <p><a class="m-link" href="#hero">Back to the top</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap/gsap.min.js" defer></script>
+<script src="assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis/lenis.min.js" defer></script>
+<script src="assets/site.js?v=2026-11-17" defer></script>
 </body>
 </html>
